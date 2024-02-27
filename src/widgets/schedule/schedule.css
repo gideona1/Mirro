@@ -1,0 +1,47 @@
+.wget-schedule-container {
+  border-left: 1px solid var(--mirro-text);
+  padding-left: 24px;
+}
+
+.wget-schedule-listitem-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.wget-schedule-listitem-container.subitem {
+  margin-left: 48px;
+}
+
+.wget-schedule-listitem-container.subitem .wget-schedule-listitem-bullet {
+  width: 16px;
+  height: 1px;
+  border-radius: 8px;
+  background-color: var(--mirro-text);
+}
+
+.wget-schedule-listitem-bullet {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #ffffff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.wget-schedule-listitem-bullet .inner-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--mirro-text);
+}
+
+.wget-schedule-listitem-bullet .inner-bullet.alt {
+  background-color: #00e3ad;
+}
+
+.wget-schedule-listitem-bullet .inner-bullet.past {
+  background-color: var(--mirro-accent-primary);
+}

@@ -1,0 +1,21 @@
+.wget-weather-container {
+  display: flex;
+  align-items: center;
+}
+
+.wget-weather-current-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wget-weather-section {
+  /* border-right: 2px solid #ffffff; */
+  margin-right: 64px;
+  /* height: 100%; */
+}
+
+.wget-weather-current-container > i {
+  font-size: 4.375rem;
+  margin-bottom: 24px;
+}

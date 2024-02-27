@@ -1,0 +1,173 @@
+:root {
+  --mirro-background: #000000;
+  --mirro-background-secondary: #151515;
+  --mirro-background-tertiary: #363636;
+
+  --mirro-box-bg-primary: #f2eeea;
+  --mirro-box-bg-secondary: #e6f5fb;
+  --mirro-box-bg-tertiary: #e7dbf4;
+  --mirro-box-text: #000000;
+
+  --mirro-text: #ffffff;
+
+  --mirro-accent-primary: #ffa86f;
+  --mirro-accent-secondary: #3773e8;
+
+  --mirro-padding: 24px;
+  --mirro-radius: 12px;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--mirro-background);
+  color: var(--mirro-text);
+  margin: 0;
+  padding: var(--mirro-padding);
+  overflow: hidden;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+div {
+  /* outline: 1px solid #ffffff0c; */
+}
+
+.mirro-screen {
+  width: 100%;
+  height: 100%;
+  /* background-color: #00e3ad; */
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.mirro-main-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+/* Boxes */
+.box {
+  background-color: var(--mirro-box-bg-primary);
+  color: var(--mirro-box-text);
+  padding: var(--mirro-padding);
+  border-radius: var(--mirro-radius);
+}
+
+.box.pallete-2 {
+  background-color: var(--mirro-box-bg-secondary);
+  color: var(--mirro-box-text);
+}
+
+.box.pallete-3 {
+  background-color: var(--mirro-box-bg-tertiary);
+  color: var(--mirro-box-text);
+}
+
+.box.pallete-4 {
+  background-color: var(--mirro-background-tertiary);
+  color: var(--mirro-text);
+}
+
+/* Padding classes */
+.container-padding.hv {
+  padding: var(--mirro-padding);
+}
+
+.container-padding.h {
+  padding: 0 var(--mirro-padding);
+}
+
+.container-padding.v {
+  padding: var(--mirro-padding) 0;
+}
+
+/* Layout */
+.flex {
+  display: flex;
+}
+
+.l-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Widget */
+.widget-header {
+  margin-bottom: 48px;
+}
+
+.mirro-widget-container.row-3 {
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+}
+
+.mirro-widget-container.row-2 {
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+/* Text weight */
+.t-bold {
+  font-weight: 700;
+}
+
+.t-reg {
+  font-weight: 300;
+}
+
+.t-lght {
+  font-weight: 200;
+}
+
+/* Text size */
+.t-exlarge {
+  font-size: 3.5rem;
+}
+
+.t-large {
+  font-size: 2.75rem;
+}
+
+.t-medium {
+  font-size: 2rem;
+}
+
+.t-small {
+  font-size: 1.3rem;
+}
+
+.t-exsmall {
+  font-size: 1rem;
+}
+
+.t-space {
+  margin-bottom: 12px;
+}
+
+.t-space-half {
+  margin-bottom: 6px;
+}
+
+.t-center {
+  text-align: center;
+}
+
+/* Text color */
+.t-accent {
+  color: var(--mirro-accent-primary);
+}

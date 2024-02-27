@@ -2,24 +2,183 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
+    <title>Mirro</title>
+    <!-- <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self' https://kit.fontawesome.com https://ka-f.fontawesome.com; 
+          script-src 'self' https://kit.fontawesome.com https://ka-f.fontawesome.com; 
+          font-src 'self' https://fonts.gstatic.com https://kit.fontawesome.com https://ka-f.fontawesome.com;
+          style-src 'self' 'sha256-Ajrn2JfOTISCPhOetahUcaOhZ854HKtCcNBgJTdIGxM=' 'sha256-UDHBHdd4da/v5O7d+qMgrwf9zOoyf3QWpe6JgGdMnHY=' 'sha256-FG186pX32/RqkjtL5kNb6LG7uYR99KhVlJGHiAbALxk=' 'sha256-MslUGu1K02u908pcw8Mbxp0ZoMZEzz1debesfSEzmsE=' 'sha256-PlTkgCr7abMkWLmLhbsMIx5IZAK+f/mrWppZJA1W79M=' 'sha256-slyjg7AL1/N0IDV9hPfojVARaaH5aG3D9Ld82aW/O9Y=' 'sha256-uFa61qf/4W07oOoNbG/gUmOF69EeWJou+8v5c4bp6kA=' 'sha256-4Cqrb9+UVnxYYbmkWOWFDIDtOh5RSNjO41psqDRsOhw=' https://fonts.googleapis.com https://kit.fontawesome.com https://ka-f.fontawesome.com"
     />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&display=swap" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/2be1444882.js" crossorigin="anonymous"></script>
+
+    <link href="./src/styles/main.css" rel="stylesheet" />
+    <link href="./src/widgets/clock/clock.css" rel="stylesheet" />
+    <link href="./src/widgets/schedule/schedule.css" rel="stylesheet" />
+    <link href="./src/widgets/weather/weather.css" rel="stylesheet" />
+    <link href="./src/widgets/music-player/music-player.css" rel="stylesheet" />
+
+    <script src="./dist/renderer.js" defer></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <div class="mirro-screen container-padding hv">
+      <div class="mirro-main-container">
+        <!-- <div class="mirro-header-container"></div> -->
+        <div class="mirro-widget-container">
+          <div class="mirro-widget">
+            <div class="widget-header">
+              <div class="t-medium t-space">Today's Schedule</div>
+              <div class="t-small t-lght">Monday, February 26, 2024</div>
+            </div>
+            <div class="widget-content wget-schedule-container">
+              <div class="wget-schedule-listitem-container">
+                <div class="wget-schedule-listitem-bullet"><div class="inner-bullet"></div></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">7:45 AM - 8:30 AM</div>
+                  <div class="t-small t-space">Morning Routine</div>
+                </div>
+              </div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./dist/renderer.js"></script>
+              <div class="wget-schedule-listitem-container">
+                <div class="wget-schedule-listitem-bullet"><div class="inner-bullet past"></div></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">9:00 AM - 11:00 AM</div>
+                  <div class="t-small t-space">Class - COSC 311</div>
+                </div>
+              </div>
+
+              <div class="wget-schedule-listitem-container">
+                <div class="wget-schedule-listitem-bullet"><div class="inner-bullet alt"></div></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">1:30 PM - 5:00 PM</div>
+                  <div class="t-small t-space">Work Hours</div>
+                </div>
+              </div>
+
+              <div class="wget-schedule-listitem-container subitem">
+                <div class="wget-schedule-listitem-bullet"></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">1:30 PM - 2:00 PM</div>
+                  <div class="t-small t-space">Work - Test Team Touchbase Session</div>
+                </div>
+              </div>
+
+              <div class="wget-schedule-listitem-container subitem">
+                <div class="wget-schedule-listitem-bullet"></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">2:30 PM - 3:30 PM</div>
+                  <div class="t-small t-space">Work - Main Team Retro</div>
+                </div>
+              </div>
+
+              <div class="wget-schedule-listitem-container subitem">
+                <div class="wget-schedule-listitem-bullet"></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">4:30 PM - 5:00 PM</div>
+                  <div class="t-small t-space">Work - Reflection & Status Update to Stand-up</div>
+                </div>
+              </div>
+
+              <div class="wget-schedule-listitem-container">
+                <div class="wget-schedule-listitem-bullet"><div class="inner-bullet"></div></div>
+                <div>
+                  <div class="t-exsmall t-lght t-space-half">7:30 PM - 9:30 PM</div>
+                  <div class="t-small t-space">Finish School Work or Study</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mirro-widget-container"></div>
+
+        <div class="mirro-widget-container row-3">
+          <div class="mirro-widget">
+            <div class="widget-header">
+              <div class="t-small t-lght">Current Time</div>
+              <div class="t-exlarge t-space">9:47 PM</div>
+
+              <div class="wget-clock-suntime-container">
+                <div class="wget-clock-box t-small">
+                  <span class="wget-clock-box-separator"><i class="fa-solid fa-sun"></i> <i class="fa-solid fa-up-long"></i> </span> 7:13 AM
+                </div>
+                <div class="wget-clock-box t-small">
+                  <span class="wget-clock-box-separator"><i class="fa-solid fa-sun"></i> <i class="fa-solid fa-down-long"></i></span> 6:21 PM
+                </div>
+              </div>
+            </div>
+            <div class="widget-content"></div>
+          </div>
+
+          <div class="mirro-widget">
+            <div class="widget-header">
+              <div class="t-small t-lght">Weather</div>
+              <div class="t-medium t-space">Ypsilanti, MI</div>
+            </div>
+            <div class="widget-content">
+              <div class="wget-weather-container">
+                <div class="wget-weather-current-container wget-weather-section">
+                  <i class="fa-solid fa-cloud-moon"></i>
+                  <div class="t-exsmall t-lght">Cloudy</div>
+                </div>
+
+                <div class="wget-weather-hilo-container wget-weather-section">
+                  <div class="t-space">
+                    <div class="t-exsmall t-lght">Current</div>
+                    <div class="t-large">44° F</div>
+                  </div>
+                </div>
+
+                <div class="wget-weather-hilo-container wget-weather-section">
+                  <div class="t-space">
+                    <div class="t-exsmall t-lght">Low</div>
+                    <div class="t-large">42° F</div>
+                  </div>
+
+                  <div>
+                    <div class="t-exsmall t-lght">High</div>
+                    <div class="t-large">67° F</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mirro-bottom-container">
+        <div class="mirro-footer-container">
+          <div class="container-padding h flex l-center t-space">
+            <div class="t-center">
+              <div class="t-medium t-space">Dress Warmly, Gideon.</div>
+              <div class="t-lght t-small">We're expecting some windy weather today.</div>
+            </div>
+          </div>
+
+          <div class="container-padding v">
+            <div class="wget-musicplayer-container">
+              <div>
+                <img
+                  class="wget-musicplayer-coverart"
+                  width="128px"
+                  height="128px"
+                  src="https://assets.audiomack.com/gabrieleziashi/a89f9289391d53edd302667521a35556ec011477dae4264e5bdfe63c29a5ab40.jpeg?width=1000&height=1000&max=true"
+                />
+              </div>
+              <div class="l-center">
+                <div class="t-lght t-exsmall t-space"><i class="fa-brands fa-spotify"></i> Playing on Spotify</div>
+                <div class="t-small">Emmanuel</div>
+                <div class="t-lght t-exsmall">Gabriel Eziashi, Henrisoul</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,17 @@
+.wget-musicplayer-container {
+  display: flex;
+  align-items: center;
+}
+
+.wget-musicplayer-coverart {
+  border: none;
+  width: 88px;
+  height: 88px;
+  margin-right: 24px;
+  border-radius: var(--mirro-radius);
+}
+
+.fa-spotify {
+  color: #1db954;
+  margin-right: 8px;
+}

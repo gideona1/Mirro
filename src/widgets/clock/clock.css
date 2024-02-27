@@ -1,0 +1,32 @@
+.wget-clock-suntime-container {
+  display: flex;
+}
+
+.wget-clock-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mirro-box-bg-primary);
+  color: var(--mirro-box-text);
+  padding: 12px 24px;
+  border-radius: var(--mirro-radius);
+  margin-right: 24px;
+}
+
+.fa-sun {
+  color: #e67e22;
+}
+
+.fa-up-long,
+.fa-down-long {
+  /* opacity: 0.7; */
+  color: #e67e22;
+  margin-left: 2px;
+}
+
+.wget-clock-box-separator {
+  display: inline-block;
+  padding-right: 12px;
+  margin-right: 12px;
+  border-right: 2px solid #000000;
+}
